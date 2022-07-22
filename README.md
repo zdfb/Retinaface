@@ -1,14 +1,14 @@
 # Retinaface
-基于Pytorch实现的Retinaface，复现了论文中的使用多尺度测试方式，widerface测试结果为，Easy：0.9620；Medium：0.9508；Hard：0.90300
+基于Pytorch实现的Retinaface，复现了论文中的使用多尺度测试方式。
 ## 性能效果
 | Backbone| easy | medium | hard |
 |:-|:-:|:-:|:-:|
-| CSPdarknet-s | 94.58% | 93.37% | 82.84% |
+| Resnet152 | 96.20% | 95.08% | 90.30% |
 
 ## 预训练模型
-+ 基于cspdarknet_s的人脸检测模型yolov5_face。<br>
->- 链接: https://pan.baidu.com/s/1Gm4m7DNbSmmbyQ43NZHojA 
->- 提取码：il9n
++ 基于Resnet152的人脸检测模型Retinaface。<br>
+>- 链接: https://pan.baidu.com/s/1OkobTSFZUYGqEw9ecc5wGQ
+>- 提取码：xp1d
 
 ## 训练
 ### 1. 下载数据集并放置在Data下
@@ -34,8 +34,6 @@ cd ./widerface_evaluate
 python setup.py build_ext --inplace
 python evaluation.py
 ```
-## 人脸检测示意图
-<img src="test_samples/result.jpg" ><br>
 ## Reference
 - https://github.com/biubug6/Pytorch_Retinaface
-- https://github.com/bubbliiiing/yolov5-pytorch
+
