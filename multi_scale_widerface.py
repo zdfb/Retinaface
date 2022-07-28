@@ -133,7 +133,7 @@ def multi_detect(img, net):
     im_shape = img.shape
     im_size_min = np.min(im_shape[0:2])
 
-    target_sizes = [500, 800, 1100, 400, 1700]
+    target_sizes = [500, 800, 1100, 1400, 1700]
     for target_size in target_sizes:
         resize = float(target_size) / float(im_size_min)
         dets, landms = detect_face(img, net, resize)
